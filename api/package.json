@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Erick Aguiar",
   "license": "ISC",
   "description": "",
   "dependencies": {
