@@ -1,5 +1,5 @@
 window.onload = async function () {
-            // Carregar usuários do banco
+    
             try {
                 const resp = await fetch('http://localhost:3000/usuarios');
                 const usuarios = await resp.json();
@@ -14,8 +14,6 @@ window.onload = async function () {
             } catch {
                 document.getElementById('mensagem').innerText = "Erro ao carregar usuários";
             }
-
-            // Se for edição, buscar dados da tarefa
             const params = new URLSearchParams(window.location.search);
             const id = params.get('id');
             if (id) {
@@ -49,7 +47,6 @@ window.onload = async function () {
             try {
                 let resposta;
                 if (id) {
-                    // Busca a tarefa atual para manter o status
                     const tarefaResp = await fetch(`http://localhost:3000/tarefas`);
                     const tarefas = await tarefaResp.json();
                     const tarefa = tarefas.find(t => t.id == id);

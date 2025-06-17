@@ -1,5 +1,5 @@
 async function exibirTarefas() {
-    // Busca as tarefas do banco de dados via API
+    
     let tarefas = [];
     try {
         const resp = await fetch('http://localhost:3000/tarefas');
@@ -17,7 +17,6 @@ async function exibirTarefas() {
         "PRONTO": document.getElementById('pronto')
     };
 
-    // Limpa as colunas
     for (const key in colunas) {
         colunas[key].innerHTML = `<h2>${key.replace('_', ' ')}</h2>`;
     }
@@ -40,7 +39,6 @@ async function exibirTarefas() {
             <button class="alterar-status">Alterar Status</button>
         `;
 
-        // Excluir tarefa
         card.querySelector('.excluir').onclick = async function() {
             if (confirm('Deseja excluir esta tarefa?')) {
                 await fetch(`http://localhost:3000/tarefas/${tarefa.id}`, { method: 'DELETE' });
@@ -48,12 +46,10 @@ async function exibirTarefas() {
             }
         };
 
-        // Editar tarefa (redireciona para cadastro.html com id)
         card.querySelector('.editar').onclick = function() {
             window.location.href = `cadastro.html?id=${tarefa.id}`;
         };
 
-        // Alterar status
         card.querySelector('.alterar-status').onclick = async function() {
             const radios = card.querySelectorAll(`input[type="radio"][name="status${tarefa.id}"]`);
             let novoStatus = tarefa.status;

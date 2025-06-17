@@ -1,110 +1,140 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background: #f6f6f6;
     margin: 0;
     padding: 0;
+    color: #000000;
 }
 
 header {
-    background: #0886fa;
+    background: #0056b3;
     color: #fff;
-    padding: 24px 0 24px 0;
+    padding: 28px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .header-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 32px;
+    letter-spacing: 1px;
 }
 
 nav {
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin-left: 32px;
-    font-size: 1rem;
-    transition: text-decoration 0.2s;
+    margin-left: 36px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a:hover, nav a.active {
+    background: #fff;
+    color: #0056b3;
 }
 
 main {
-    margin: 32px 0 0 0;
-    padding: 0 0 0 16px;
+    margin: 40px auto 0 auto;
+    padding: 0 24px;
+    max-width: 1100px;
 }
 
 h1 {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
+    font-size: 2.1rem;
+    margin-bottom: 24px;
     margin-top: 0;
+    font-weight: 600;
+    color: #0056b3;
 }
 
 .colunas {
     display: flex;
-    gap: 24px;
-    margin-top: 8px;
+    gap: 32px;
+    margin-top: 16px;
+    justify-content: center;
 }
 
 .coluna {
     flex: 1;
-    min-width: 300px;
+    min-width: 320px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 18px 14px 24px 14px;
 }
 
 .coluna h2 {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    margin-top: 0;
+    color: #0056b3;
+    font-weight: 600;
 }
 
 .card-tarefa {
-    background: #fff;
-    border: 1px solid #ececec;
-    border-radius: 7px;
-    padding: 16px 16px 12px 16px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 2px rgba(44,62,80,0.03);
+    background: #f6f6f6;
+    border: 1.5px solid #0056b3;
+    border-radius: 10px;
+    padding: 18px 16px 12px 16px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    font-size: 1rem;
 }
 
 .card-tarefa b {
     font-weight: bold;
+    color: #0056b3;
 }
 
 button.editar,
 button.excluir,
 button.alterar-status {
-    background: #0886fa;
+    background: #0056b3;
     color: #fff;
     border: none;
-    padding: 6px 14px;
-    border-radius: 5px;
+    padding: 7px 16px;
+    border-radius: 6px;
     font-size: 1rem;
     cursor: pointer;
     margin-right: 6px;
     margin-top: 8px;
     margin-bottom: 8px;
-    transition: background 0.2s;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
 }
 
 button.excluir {
+    background: #fff;
+    color: #0056b3;
+    border: 1.5px solid #0056b3;
     margin-right: 0;
 }
 
 button.editar:hover,
-button.excluir:hover,
 button.alterar-status:hover {
-    background: #005bb5;
+    background: #000;
+    color: #fff;
+}
+
+button.excluir:hover {
+    background: #0056b3;
+    color: #fff;
 }
 
 .card-tarefa input[type="radio"] {
     margin-left: 8px;
     margin-right: 2px;
+    accent-color: #0056b3;
 }
 
 .footer-wireframe {
