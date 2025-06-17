@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Tarefa</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+    <header>
+        <span class="header-title">Gerenciamento de Tarefas</span>
+        <nav>
+            <a href="index.html">Cadastro de Usuários</a>
+            <a href="cadastro.html">Cadastro de Tarefas</a>
+            <a href="gerenciar.html">Gerenciar Tarefas</a>
+        </nav>
+    </header>
+    <h1>Cadastro de Tarefas</h1>
+    <form id="cadastroTarefa" onsubmit="return validarFormulario()">
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" required>
+
+        <label for="setor">Setor:</label>
+        <input type="text" id="setor" required>
+
+        <label for="usuario">Usuário:</label>
+        <select id="usuario" required>
+            <option>João</option>
+        </select>
+
+        <label for="prioridade">Prioridade:</label>
+        <select id="prioridade" required>
+            <option value="baixa">Baixa</option>
+            <option value="média">Média</option>
+            <option value="alta">Alta</option>
+        </select>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+    <div id="mensagem"></div>
+    <div class="footer-wireframe">
+    </div>
+
+    <script src="cadastro.js"></script>
+</body>
+
+</html>
