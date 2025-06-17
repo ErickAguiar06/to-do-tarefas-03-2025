@@ -31,12 +31,12 @@ const listarTarefas = async (req, res) => {
 
 const atualizarTarefa = async (req, res) => {
   const { id } = req.params;
-  const { status, prioridade } = req.body;
+  const { descricao, setor, prioridade, usuarioId, status } = req.body;
 
   try {
     const tarefa = await prisma.tarefa.update({
       where: { id: Number(id) },
-      data: { status, prioridade },
+      data: { descricao, setor, prioridade, usuarioId, status },
     });
     res.json(tarefa);
   } catch (error) {
